@@ -24,11 +24,11 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
   const fullPrice = getPrice(tier.seats.full);
 
   return (
-    <div className={`relative bg-white border border-[#E5E5E5] rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow ${
+    <div className={`relative bg-white border border-[#ECECEC] rounded-xl p-8 hover:shadow-md transition-shadow ${
       isProfessional ? 'bg-[#F0F8FF]' : ''
     }`}>
       {/* Plan Name */}
-      <h3 className="text-[28px] font-semibold mb-6 text-black">{tier.name}</h3>
+      <h3 className="text-[32px] font-normal mb-6 text-black tracking-[-0.32px]">{tier.name}</h3>
 
       {/* Billing Toggle (Professional only) */}
       {isProfessional && onBillingChange && (
@@ -51,9 +51,9 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
         <div className="mb-8 space-y-4">
           {/* Collab Seat */}
           {collabPrice !== null && (
-            <div className="flex items-center justify-between pb-4 border-b border-[#E5E5E5]">
+            <div className="flex items-center justify-between pb-4 border-b border-[#ECECEC]">
               <div>
-                <p className="text-base font-medium text-black underline decoration-dotted underline-offset-4">
+                <p className="text-base font-normal text-black border-b border-dashed border-black/30 inline-block">
                   Collab seat
                 </p>
                 <div className="flex items-center gap-2 mt-1">
@@ -61,7 +61,7 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
                   {getProductIcon('slides', { size: 16 })}
                 </div>
               </div>
-              <p className="text-2xl font-medium text-black">
+              <p className="text-[18px] font-medium text-black">
                 ${collabPrice}<span className="text-base text-[#666]">/mo</span>
               </p>
             </div>
@@ -69,9 +69,9 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
 
           {/* Dev Seat */}
           {devPrice !== null && (
-            <div className="flex items-center justify-between pb-4 border-b border-[#E5E5E5]">
+            <div className="flex items-center justify-between pb-4 border-b border-[#ECECEC]">
               <div>
-                <p className="text-base font-medium text-black underline decoration-dotted underline-offset-4">
+                <p className="text-base font-normal text-black border-b border-dashed border-black/30 inline-block">
                   Dev seat
                 </p>
                 <div className="flex items-center gap-2 mt-1">
@@ -80,8 +80,8 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
                   {getProductIcon('devmode', { size: 16 })}
                   {getProductIcon('buzz', { size: 16 })}
                 </div>
-              </div>
-              <p className="text-2xl font-medium text-black">
+               </div>
+              <p className="text-[18px] font-medium text-black">
                 ${devPrice}<span className="text-base text-[#666]">/mo</span>
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
           {fullPrice !== null && (
             <div className="flex items-center justify-between pb-4">
               <div>
-                <p className="text-base font-medium text-black underline decoration-dotted underline-offset-4">
+              <p className="text-base font-normal text-black border-b border-dashed border-black/30 inline-block">
                   Full seat
                 </p>
                 <div className="flex items-center gap-2 mt-1">
@@ -105,7 +105,7 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
                   {getProductIcon('make', { size: 16 })}
                 </div>
               </div>
-              <p className="text-2xl font-medium text-black">
+              <p className="text-[18px] font-medium text-black">
                 ${fullPrice}<span className="text-base text-[#666]">/mo</span>
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function PricingCard({ tier, billingCycle = 'monthly', onBillingC
 
       {/* CTA Buttons */}
       <div className="mb-8 space-y-3">
-        <button className="w-full py-3 px-6 bg-black text-white text-sm font-medium rounded-lg hover:bg-[#333] transition-colors">
+        <button className="w-full py-3 px-5 bg-black text-white text-sm font-normal rounded-lg hover:bg-[#333] transition-colors">
           {tier.cta.primary}
         </button>
         {tier.cta.secondary && (

@@ -5,9 +5,9 @@ interface ProductIconProps {
 
 export function FigJamIcon({ size = 20, className = '' }: ProductIconProps) {
   return (
-    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      <rect width="20" height="20" rx="4" fill="#A259FF"/>
-      <path d="M10 6V14M6 10H14" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" viewBox="0 0 24 24" className={className} aria-label="FigJam">
+      <rect width="24" height="24" fill="#F1E5FF" rx="4"></rect>
+      <path fill="#8638E5" d="M18 4a2 2 0 0 1 2 2v7.172l-.01.197a2 2 0 0 1-.576 1.217l-4.828 4.828-.147.133a2 2 0 0 1-1.267.453H6l-.204-.01A2 2 0 0 1 4 18V6a2 2 0 0 1 2-2zM6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v-4a2 2 0 0 1 2-2h4V6a1 1 0 0 0-1-1zm9 9a1 1 0 0 0-1 1v3.586L18.586 14z"></path>
     </svg>
   );
 }

@@ -9,10 +9,10 @@ interface BillingToggleProps {
 
 export default function BillingToggle({ selected, onChange }: BillingToggleProps) {
   return (
-    <div className="inline-flex bg-[#F7F7F7] rounded-lg p-1 gap-1">
+    <div className="inline-flex bg-[#F7F7F7] rounded-full p-1 gap-1">
       <button
         onClick={() => onChange('monthly')}
-        className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
+        className={`px-4 text-sm font-medium rounded-full transition-all ${
           selected === 'monthly'
             ? 'bg-white text-black shadow-sm'
             : 'text-[#666] hover:text-black'
@@ -22,7 +22,7 @@ export default function BillingToggle({ selected, onChange }: BillingToggleProps
       </button>
       <button
         onClick={() => onChange('annual')}
-        className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
+        className={`px-4 text-sm font-medium rounded-full transition-all ${
           selected === 'annual'
             ? 'bg-white text-black shadow-sm'
             : 'text-[#666] hover:text-black'

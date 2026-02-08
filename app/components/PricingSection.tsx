@@ -8,7 +8,7 @@ export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<BillingCycle>('monthly');
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white">
       <div className="max-w-[1440px] mx-auto px-16">
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-4 gap-6">
